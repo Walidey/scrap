@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<% price_m2 = price_m2.replace(/\s/g, "") %>
+        <% parseInt(price_m2.substring(0, price_m2.length)) %>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Comparateur de prix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  </head>
+  <% if(parseInt(price_m2) * parseInt(surface) > price ){%>
+   <body style="background-color:#01E669;">
+   <% } else { %>
+      <body style="background-color:#D9052B;"> <%}%>
+
+  <script src="index.js"></script>
+      <div class="header">
+         <p>Comparateur de bien immobilier </p>
+      </div>
+
+
+      <div class="data">
+        <p class = "price"> Prix du bien : <%= price %> </p>
+        <p class = "city"> Ville : <%= city %> </p>
+        <p class = "price_m2"> Prix moyen au m² :<%= price_m2 %> </p>
+        <p classe = "surface"> Surface : <%= surface %> </p>
+
+        <p class="estimation"> Estimation du bien :</p>
+      <div class="data"> <%=  parseInt(price_m2) * parseInt(surface) %> € </div>
+</div>
+        
+        <div>
+        <p>
+         <big class="result"> <% if(parseInt(price_m2) * parseInt(surface) > price ){%>
+
+
+          GOOD DEAL
+   <% } else { %>
+      BAD DEAL <%}%> </big>
+      <p>
+        </div>
+
+  
+      </div>
+     
+      
+    </form>
+
+
+  </body>
+</html>

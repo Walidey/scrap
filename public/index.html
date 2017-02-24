@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Comparateur de prix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <script src="index.js"></script>
+    <form action="/" method="post" name="url">
+      <div class="header">
+         <p>Comparateur de bien immobilier </p>
+          <p id='prix'> </p>
+      <p id='surface'> </p> 
+      <script type="text/javascript">
+            $(document).ready(function(){
+
+        $.getJSON('/leboncoin', function (data) {
+
+        $("#prix").text(data.latitude);  
+        $("#surface").text(data.longitude);    
+
+        });
+             });
+      </script>
+      </div>
+      <div class="description">
+        <p>Veuillez saisir le lien leboncoin pour commencer la comparaison.</p>
+      </div>
+      <div class="input">
+        <input type="text" class="button" id="lien" name="url" placeholder="https://www.leboncoin.fr/annonces/..">
+        <input type="submit" class="button" id="submit" value="Comparer"> 
+      </div>
+      <div>
+     
+      </div>
+    </form>
+
+
+  </body>
+</html>

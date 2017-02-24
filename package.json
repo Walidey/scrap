@@ -1,0 +1,14 @@
+{
+  "name": "node-scrape",
+  "version": "0.0.1",
+  "description": "Scrapping Leboncoin and MeilleurAgent",
+  "main": "app.js",
+  "author": "Yacine&Walid",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cheerio": "latest",
+    "ejs": "^2.5.5",
+    "express": "latest",
+    "request": "latest"
+  }
+}
